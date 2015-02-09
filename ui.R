@@ -13,8 +13,12 @@ shinyUI(
           radioButtons(
             "data_source",
             label="Select a data source:",
-            choices=list("Alice's Adventures in Wonderland"=1, "Upload my own data"=2),
-            selected=1
+            choices=list(
+              "The Tragedy of Romeo and Juliet"=3,
+              "Alice's Adventures in Wonderland"=2,
+              "Upload my own data"=1
+            ),
+            selected=2
           ),
           fileInput(
             "upload_data",

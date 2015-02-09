@@ -9,10 +9,15 @@ library(SnowballC)
 shinyServer(function(input, output, session) {
   ## data source tab
   data_handler <- reactive({
-    if (input$data_source==1) {
+    if (input$data_source==3) {
+      updateTextInput(session, "c_stopwords", value=c("rom,jul,thee,thy,thou"))
+      romeo_juliet
+    } else if (input$data_source==2) {
+      updateTextInput(session, "c_stopwords", value=c("alice,said"))
       alice_story
     } else {
       if (is.null(input$upload_data)) return(NULL)
+      updateTextInput(session, "c_stopwords", value="")
       paste(readLines(input$upload_data$datapath), collapse="<br/>")
     }
   })
