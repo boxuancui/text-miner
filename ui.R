@@ -53,7 +53,7 @@ shinyUI(
       fluidPage(
         tags$a("Contact Author", href="mailto:cui.bo@bcg.com?Subject=Text Miner"),
         br(),
-        tags$a("GitHub", href="http://github.bcg.com/boc/text-miner.git")
+        tags$a("GitHub", href="http://github.bcg.com/boc/text-miner.git", target="_blank")
       )
     )
   )
