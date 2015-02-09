@@ -6,7 +6,9 @@ library(data.table)
 library(tm)
 library(SnowballC)
 
-load("data/tdm.RData")
+alice_story <- paste(readLines("data/story.txt"), collapse="<br/>")
+
+# load("data/tdm.RData")
 # raw <- fread("data/raw_data.csv", header=TRUE, sep=",")
 # cleaned <- raw[!is.na(notes) & notes!=""]
 # 
