@@ -28,6 +28,7 @@ shinyUI(
         ),
         mainPanel(
           htmlOutput("text_data"),
+          tags$head(includeScript("www/google_analytics.js")),
           tags$head(tags$script(src="control.js")),
           tags$script("$('#upload_data').hide();", type="text/javascript")
         )
